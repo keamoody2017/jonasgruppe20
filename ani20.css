@@ -1,0 +1,70 @@
+body {
+    margin: 0px;
+}
+
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+    position: absolute;
+    background-color: orange;
+    /*    overflow: hidden;*/
+}
+
+
+#jonassprite {
+    background-image: url("img/jonas_final_1.svg");
+    /*    background-repeat: no-repeat;*/
+    background-size: 800%;
+    width: 10vw;
+    height: 20vw;
+
+    /*    position: absolute;   */
+    /*    left: 35%;*/
+}
+
+
+
+.jonasthink {
+    animation-name: jonasthink_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8);
+    animation-fill-mode: both;
+
+}
+
+@keyframes jonasthink_kf {
+    from {
+        background-position: 0;
+
+    }
+    to {
+        background-position: -800%;
+    }
+}
+
+/*
+.jonasmobil {
+
+
+}
+
+.jonasnoshare {}
+
+.jonashare {}
+*/
+
+/*
+#jailcontainer {
+      width: ;
+    height: ;
+    position: absolute;
+    top: ;
+}
+*/
+
+#jail {}
+
+.jailviral {}
+
+.jailprison {}
