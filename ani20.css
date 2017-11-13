@@ -7,64 +7,147 @@ body {
     height: 56.25vw;
     position: absolute;
     background-color: orange;
-    /*    overflow: hidden;*/
+
 }
 
+#jonas_container {
+    position: absolute;
+    left: 40%;
+    top: 20%;
 
-#jonassprite {
+}
+
+#jonas_sprite {
     background-image: url("img/jonas_final_1.svg");
-    /*    background-repeat: no-repeat;*/
     background-size: 800%;
-    width: 10vw;
-    height: 20vw;
-
-    /*    position: absolute;   */
-    /*    left: 35%;*/
+    width: 20vw;
+    height: 40vw;
 }
-
-
 
 .jonasthink {
     animation-name: jonasthink_kf;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(8);
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(7);
     animation-fill-mode: both;
 
 }
 
 @keyframes jonasthink_kf {
-    from {
+    0% {
         background-position: 0;
 
     }
-    to {
-        background-position: -800%;
+
+
+
+    100% {
+        background-position: -700%;
     }
 }
 
-/*
-.jonasmobil {
 
-
-}
-
-.jonasnoshare {}
-
-.jonashare {}
-*/
-
-/*
-#jailcontainer {
-      width: ;
-    height: ;
+#nude_container {
     position: absolute;
-    top: ;
+    left: 40%;
+    top: 20%;
+    background-repeat: no-repeat;
+
+
 }
-*/
 
-#jail {}
+#nude_sprite {
+    background-image: url("img/nude.svg");
+    background-size: 100%;
+    width: 26px;
+    height: 48px;
+    display: none;
+}
 
-.jailviral {}
+.nude {
+    animation-name: nude_kf;
+    animation-duration: 2s;
+    transform: rotate(360deg);
+}
 
-.jailprison {}
+@keyframes nude_kf {
+    from {
+
+        transform: rotate(0deg);
+
+    }
+    to {
+
+        transform: rotate(360deg);
+    }
+}
+
+#share_container {
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    display: none;
+}
+
+#share_sprite {
+    background-image: url(img/textbox.svg);
+    background-size: 50%;
+    height: 50vw;
+    width: 50vw;
+    background-repeat: no-repeat;
+}
+
+.test {
+    animation-name: test_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 3;
+
+}
+
+@keyframes test_kf {
+    from {
+        background-position: 60%;
+
+    }
+    to {
+        background-position: -20%;
+    }
+}
+
+
+#prison_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-duration: 2s;
+    display: none;
+
+}
+
+#prison_sprite {
+    background-image: url(img/prison.svg);
+    background-size: 50%;
+    height: 50vw;
+    width: 50vw;
+    background-repeat: no-repeat;
+}
+
+.prison {
+    animation-name: prison_kf;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes prison_kf {
+    from {
+
+        transform: rotate(0deg);
+
+    }
+    to {
+
+        transform: rotate(360deg);
+    }
+}

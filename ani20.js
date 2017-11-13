@@ -1,96 +1,58 @@
-$(window).on("load", sidenErLoadet);
+$(window).on("load", jonasThink);
 
 
+function jonasThink() {
+    console.log("jonasThink");
 
-function sidenErLoadet() {
-    console.log("klar")
+    $("#jonas_sprite").addClass("jonasthink");
 
-    $("#jonas").removeClass("");
-    $("#jonas").addClass("");
-
-    $("#jonas").on("animationend", nude);
+    $("#jonas_container").on("animationend", nude);
 
 
 }
 
 function nude() {
-    console.log("nude")
+    console.log("nude");
+    $("#nude_container").off("animationend", nude)
 
-    $("#jonas").removeClass("");
-    $("#jonas").addClass("jonasstart");
+    $("#nude_sprite").addClass("nude");
+    $("#nude_sprite").show();
 
-    $("#jonas").on("animationend", nude);
-}
 
-function sendnude() {
-    console.lig("sendnude")
-
-    $("#jonas").removeClass("");
-    $("#jonas").addClass("");
-
-    $("#jonas").on("animationend", nudemodtaget);
-}
-
-function nudemodtaget() {
-    console.log("nudemotaget")
-
-    $("#jonas").removeClass("");
-    $("#jonas").addClass("");
-
-    $("#jonas").on("animationend", valg);
+    $("#nude_container").on("animationend", share);
 }
 
 
-/* INDSÆT DEL/DEL IKKE BUTTONS*/
-
-/* valg 1 */
-function noshare() {
-    console.log("noshare")
-
-     $("#jonas").removeClass("");
-    $("#jonas").addClass("");
-
-    $("#jonas").on("animationend", jubel);
-}
-
-function jubel() {
-    console.log("jubel")
-
-     $("#jonas").removeClass("");
-    $("#jonas").addClass("");
-}
-
-
-/*valg 2*/
 function share() {
-    console.log("share")
+    console.log("share");
+    $("#share_container").off("animationend", share);
 
-     $("#jonas").removeClass("");
-    $("#jonas").addClass("");
+    $("#jonas_sprite").hide();
 
-    $("#jonas").on("animationend", sendvidere);
+    $("#nude_sprite").removeClass("nude");
+    $("#nude_sprite").hide();
+
+    $("#share_sprite").addClass("test");
+    $("#share_container").show();
+
+
+    $("#share_container").on("animationend", prison);
+
 }
 
-function sendvidere() {
-    console.log("sendvidere")
+function prison() {
+    console.log("prison");
 
-     $("#jonas").removeClass("");
-    $("#jonas").addClass("");
+    $("#prison_container").off("animationend", prison);
 
-    $("#jonas").on("animationend", billedetspredes);
+    $("#share_sprite").removeClass("test");
+    $("#share_container").hide();
+
+    $("#jonas_sprite").show();
+    $("#jonas_sprite").addClass("jonasthink");
+
+
+
+    $("#prison_container").off("animationend", prison);
+
 }
-
-function billedetspredes() {
-    console.log("billedetspredes")
-
-     $("#jonas").removeClass("");
-    $("#jail").addClass("");
-
-    $("#jail").on("animationend", tremmer);
-}
-
-function tremmer() {
-    console.log("tremmer")
-
-     $("#jail").removeClass("");
-    $("#jail").addClass("");
