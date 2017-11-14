@@ -8,7 +8,6 @@ function jonasThink() {
 
     $("#jonas_container").on("animationend", nude);
 
-
 }
 
 
@@ -19,7 +18,41 @@ function nude() {
     $("#nude_sprite").show();
     $("#nude_sprite").addClass("nude");
 
-    $("#nude_container").on("animationend", share);
+    $("#nude_sprite").on("animationend", valgMedMuligheder);
+}
+
+
+
+function valgMedMuligheder() {
+    $(".share_button").on("click", reaction1);
+    $(".no_share_button").on("click", reaction2);
+
+
+}
+
+function reaction1() {
+    console.log("reaction1");
+    $(".share_button").hide();
+    $(".no_share_button").hide();
+    $(".share_button").off("click", reaction1);
+
+    jubel();
+}
+
+function reaction2() {
+    console.log("reaction2");
+    $(".share_button").hide();
+    $(".no_share_button").hide();
+    $(".no_share_button").off("click", reaction2);
+
+    share();
+
+}
+
+function jubel() {
+    console.log("jubel");
+    $("#jonas_sprite").hide();
+    $("#jubel_container").show();
 }
 
 function share() {
@@ -49,6 +82,8 @@ function prison1() {
     $("#share_sprite").hide();
     $("#prison_container").show();
 
+    $("#jonas_sprite").show();
+
     $("#prison_container").addClass("prison_rotate");
 
 
@@ -62,8 +97,7 @@ function prison2() {
     $("#prison_container").off("animationend", prison2);
 
     $("#nude_container").hide();
-    $("#jonas_sprite").show();
-    $("#jonas_sprite").addClass("jonasstart");
+
 
     $("#prison_container").show();
     $("#prison_container").removeClass("prison_rotate");
@@ -84,13 +118,15 @@ function privatSnak() {
     $("#privatsnak_container").show();
     $("#privatsnak_sprite").addClass("privatsnak_animation");
 
-    $("#prison_container").on("animationend", anonymLogo);
+    $("#privatsnak_container").on("animationend", anonymlogo);
 }
 
 
-function anonymLogo() {
+function anonymlogo() {
     console.log("anonymlogo");
-    $("#anonym_container").off("animationend", anonymLogo);
+    $("#anonym_container").off("animationend", anonymlogo);
+
+    $("#anonym_container").show();
 
     $("#privatsnak_container").hide();
     $("#anonym_sprite").addClass("");
