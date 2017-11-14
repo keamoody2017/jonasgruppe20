@@ -12,27 +12,27 @@ body {
 
 button1 {
     background-color: blue;
-    border-radius: 25px;
+    border-radius: 50px;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: 'Futura', sans-serif;
-    font-size: 20px;
+    font-size: 10px;
 
 }
 
 button2 {
     background-color: blueviolet;
-    border-radius: 25px;
+    border-radius: 50px;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 10px;
     text-align: left;
     text-decoration: none;
     display: inline-block;
     font-family: 'Futura', sans-serif;
-    font-size: 20px;
+    font-size: 10px;
 
 }
 
@@ -41,6 +41,12 @@ button2 {
     left: 40%;
     top: 20%;
 
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
 }
 
 .jonasstart {
@@ -142,8 +148,8 @@ button2 {
 #share_sprite {
     background-image: url(img/grlsad.svg);
     background-size: 2100%;
-    height: 62.5vw;
-    width: 75vw;
+    height: 31.75vw;
+    width: 37.5vw;
 }
 
 .share_test {
@@ -246,6 +252,7 @@ button2 {
 .privatsnak_animation {
     animation-name: privatsnak_kf;
     animation-duration: 2s;
+    animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-timing-function: ease-in;
 

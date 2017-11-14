@@ -22,7 +22,6 @@ function nude() {
     $("#nude_container").on("animationend", share);
 }
 
-
 function share() {
     console.log("share");
     $("#share_container").off("animationend", share);
