@@ -83,4 +83,15 @@ function privatSnak() {
     $("#prison_container").hide();
     $("#privatsnak_container").show();
     $("#privatsnak_sprite").addClass("privatsnak_animation");
+
+    $("#prison_container").on("animationend", anonymLogo);
+}
+
+
+function anonymLogo() {
+    console.log("anonymlogo");
+    $("#anonym_container").off("animationend", anonymLogo);
+
+    $("#privatsnak_container").hide();
+    $("#anonym_sprite").addClass("");
 }

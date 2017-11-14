@@ -261,7 +261,44 @@ button2 {
 @keyframes privatsnak_kf {
     from {
         left: 40%;
-        top: 10%;
+        top: 40%;
+    }
+
+    to {
+        left: 30%;
+        top: 40%;
+    }
+}
+
+
+#anonym_container {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    display: none;
+}
+
+#anonym_sprite {
+    background-image: url(img/anonym-badge.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    width: 678vw;
+    height: 452vw;
+}
+
+.anonym_animation {
+    animation-name: anonym_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes anonym_kf {
+    from {
+        left: 40%;
+        top: 40%;
     }
 
     to {
