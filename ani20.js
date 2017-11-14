@@ -35,20 +35,35 @@ function share() {
 
 
 
-    $("#share_container").on("animationend", prison);
+    $("#share_container").on("animationend", prison1);
 
 }
 
-function prison() {
-    console.log("prison");
+function prison1() {
+    console.log("prison1");
+    $("#prison_container").off("animationend", prison1);
 
-    $("#prison_container").off("animationend", prison);
+
+    $("#share_sprite").removeClass("share_test");
+    $("#share_sprite").hide();
+    $("#prison_container").show();
+
+    $("#prison_container").addClass("prison_rotate");
+
+
+    $("#prison_container").on("animationend", prison2);
+
+}
+
+function prison2() {
+    console.log("prison2");
+
+    $("#prison_container").off("animationend", prison2);
 
     $("#prison_container").show();
 
-    $("#prison_container").addClass("prison");
-
-
-    $("#prison_container").on("animationend", prison);
+    $("#prison_container").removeClass("prison_rotate");
+    $("#prison_container").addClass("prison_fall");
+    $("#jonas_sprite").show();
 
 }

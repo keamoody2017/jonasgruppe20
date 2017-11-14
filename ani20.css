@@ -117,7 +117,7 @@ body {
 
 #prison_container {
     position: absolute;
-    top: 50%;
+    top: 12%;
     left: 50%;
     animation-duration: 2s;
     display: none;
@@ -132,15 +132,16 @@ body {
     background-repeat: no-repeat;
 }
 
-.prison {
-    animation-name: prison_kf;
-    animation-duration: 4s;
-    animation-iteration-count: 3;
+.prison_rotate {
+    animation-name: prison_rotate_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 
 }
 
 
-@keyframes prison_kf {
+@keyframes prison_rotate_kf {
     from {
 
         transform: rotate(0deg);
@@ -149,5 +150,26 @@ body {
     to {
 
         transform: rotate(4deg);
+    }
+}
+
+
+.prison_fall {
+    animation-name: prison_fall_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes prison_fall_kf {
+    0% {
+
+        top: 10%;
+
+    }
+
+    100% {
+
+        top: 70%;
     }
 }
