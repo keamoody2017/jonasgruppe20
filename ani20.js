@@ -11,6 +11,7 @@ function jonasThink() {
 
 }
 
+
 function nude() {
     console.log("nude");
     $("#nude_container").off("animationend", nude);
@@ -20,6 +21,7 @@ function nude() {
 
     $("#nude_container").on("animationend", share);
 }
+
 
 function share() {
     console.log("share");
@@ -60,10 +62,26 @@ function prison2() {
 
     $("#prison_container").off("animationend", prison2);
 
-    $("#prison_container").show();
+    $("#nude_container").hide();
+    $("#jonas_sprite").show();
+    $("#jonas_sprite").addClass("jonasstart");
 
+    $("#prison_container").show();
     $("#prison_container").removeClass("prison_rotate");
     $("#prison_container").addClass("prison_fall");
-    $("#jonas_sprite").show();
 
+    $("#prison_container").on("animationend", privatSnak);
+
+
+}
+
+function privatSnak() {
+    console.log("privatSnak");
+    $("#privatsnak_container").off("animationend", privatSnak);
+
+
+    $("#jonas_container").hide();
+    $("#prison_container").hide();
+    $("#privatsnak_container").show();
+    $("#privatsnak_sprite").addClass("privatsnak_animation");
 }
