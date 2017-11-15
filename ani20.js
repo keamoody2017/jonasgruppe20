@@ -105,20 +105,23 @@ function prison1() {
 
     $("#share_sprite").removeClass("share_test");
     $("#share_sprite").hide();
+    $("#nude_container").hide();
+
     $("#mobil_container").hide();
     $("#mobil_sprite").removeClass("mobil_anim");
 
     $("#prison_container").show();
+    $("#prison_container").addClass("prison_fall");
+    //$("#prison_container").addClass("prison_rotate");
 
-    $("#jonas_sprite").show();
-    $("#nude_container").hide();
+    $("#jonas_container").show();
 
-    $("#prison_container").addClass("prison_rotate");
 
     $("#tiktok")[0].pause();
     $("#prison")[0].currentTime = 4.5;
+    $("#prison")[0].play();
 
-    $("#prison_container").on("animationend", prison2);
+    $("#prison_container").on("animationend", privatSnak);
 
 
 }
@@ -131,12 +134,12 @@ function prison2() {
     $("#nude_container").hide();
 
     $("#tiktok")[0].pause();
-    $("#prison")[0].play();
+
 
 
     $("#prison_container").show();
-    $("#prison_container").removeClass("prison_rotate");
-    $("#prison_container").addClass("prison_fall");
+    //$("#prison_container").removeClass("prison_rotate");
+    // $("#prison_container").addClass("prison_fall");
 
     $("#prison_container").on("animationend", privatSnak);
 
