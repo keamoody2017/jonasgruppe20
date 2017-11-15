@@ -257,8 +257,8 @@ button.no_share_button {
 
 #prison_container {
     position: absolute;
-    left: 35%;
-    top: -5%;
+    left: 25%;
+    top: -20%;
     animation-duration: 2s;
     display: none;
 
@@ -297,12 +297,12 @@ button.no_share_button {
 
 @keyframes prison_fall_kf {
     0% {
-        left: 35%;
-        top: -5%;
+        left: 25%;
+        top: -20%;
     }
     100% {
-        left: 35%;
-        top: 30%;
+        left: 25%;
+        top: 15%;
     }
 }
 
