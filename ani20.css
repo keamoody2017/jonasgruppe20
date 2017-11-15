@@ -25,7 +25,7 @@ button {
     text-align: center;
     color: white;
     font-family: 'Futura', sans-serif;
-    font-size: 10px;
+    font-size: 20px;
     background-repeat: no-repeat;
 }
 
@@ -86,6 +86,7 @@ button.no_share_button {
     animation-iteration-count: 1;
     animation-timing-function: steps(7);
     animation-fill-mode: both;
+    animation-delay: 2s;
 }
 
 @keyframes jonasthink_kf {
