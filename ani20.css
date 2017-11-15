@@ -208,8 +208,8 @@ button.no_share_button {
 .mobil_anim {
     animation-name: mobil_anim_kf;
     animation-duration: 3s;
-    animation-iteration-count: 3;
-    animation-timing-function: steps(6);
+    animation-iteration-count: 1;
+    animation-timing-function: steps(5);
     animation-fill-mode: forwards;
 }
 
@@ -218,7 +218,7 @@ button.no_share_button {
         background-position: 0%;
     }
     100% {
-        background-position: -600%;
+        background-position: -500%;
     }
 }
 
