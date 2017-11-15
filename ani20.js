@@ -57,7 +57,7 @@ function jubel() {
     console.log("jubel");
     $("#jonas_sprite").hide();
     $("#jubel_container").show();
-
+    $("#jubel_sprite").addClass("jubel");
     privatSnak();
 }
 
