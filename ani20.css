@@ -1,331 +1,369 @@
-body {
-    margin: 0px;
-}
+                    body {
+                    margin: 0px;
+                    width: 100vw;
+                    height: 100vh;
+                    overflow: hidden;
+                }
 
-#scene {
-    width: 100vw;
-    height: 56.25vw;
-    position: absolute;
-    background-color: orange;
-}
+                #scene {
+                    width: 100vw;
+                    height: 56.25vw;
+                    position: absolute;
+                    background-color: orange;
+                }
 
-button1 {
-    background-color: blue;
-    border-radius: 50px;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Futura', sans-serif;
-    font-size: 10px;
-}
+                button {
+                    min-width: 120px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: 1.4em;
+                    background-position: center;
+                    background-size: cover;
+                    position: absolute;
+                    padding: 40px;
+                    text-align: center;
+                    color: white;
+                    font-family: 'Futura', sans-serif;
+                    font-size: 10px;
+                    <<<<<<< HEAD
+                }
 
-button2 {
-    background-color: blueviolet;
-    border-radius: 50px;
-    color: white;
-    padding: 10px 10px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Futura', sans-serif;
-    font-size: 10px;
-}
+                button.share_button {
+                    top: 20%;
+                    left: 64%;
+                    background: url(img/privat1.svg);
+                    background-repeat: no-repeat;
+                }
 
-#jonas_container {
-    position: absolute;
-    left: 40%;
-    top: 20%;
-}
+                button.no_share_button {
+                    top: 50%;
+                    left: 64%;
+                    background: url(img/snak1.svg);
+                    background-repeat: no-repeat;
+                    >>>>>>>origin/master
+                }
 
-#box {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-}
+                #jonas_container {
+                    position: absolute;
+                    left: 40%;
+                    top: 20%;
+                }
 
-.jonasstart {
-    animation-name: jonasstart_kf;
-    animation-duration: 3s;
-    animation-iteration-count: 3;
-    animation-timing-function: steps(2);
-    animation-fill-mode: both;
-    animation-delay: 2s;
-}
+                #box {
+                    width: 200px;
+                    height: 200px;
+                    background-color: red;
+                }
 
-@keyframes jonasstart_kf {
-    0% {
-        background-position: 0;
-    }
-    100% {
-        background-position: -200%;
-    }
-}
+                .jonasstart {
+                    animation-name: jonasstart_kf;
+                    animation-duration: 3s;
+                    animation-iteration-count: 3;
+                    animation-timing-function: steps(2);
+                    animation-fill-mode: both;
+                    animation-delay: 2s;
+                }
 
-#jonas_sprite {
-    background-image: url("img/jonas_final_1.svg");
-    background-size: 800%;
-    width: 20vw;
-    height: 40vw;
-}
+                @keyframes jonasstart_kf {
+                    0% {
+                        background-position: 0;
+                    }
+                    100% {
+                        background-position: -200%;
+                    }
+                }
 
-.jonasthink {
-    animation-name: jonasthink_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: steps(7);
-    animation-fill-mode: both;
-    animation-delay: 1.5s;
-}
+                #jonas_sprite {
+                    background-image: url("img/jonas_final_1.svg");
+                    background-size: 800%;
+                    width: 20vw;
+                    height: 40vw;
+                }
 
-@keyframes jonasthink_kf {
-    0% {
-        background-position: 0;
-    }
-    100% {
-        background-position: -700%;
-    }
-}
+                .jonasthink {
+                    animation-name: jonasthink_kf;
+                    animation-duration: 2s;
+                    animation-iteration-count: 1;
+                    animation-timing-function: steps(7);
+                    animation-fill-mode: both;
+                    animation-delay: 1.5s;
+                }
 
-#nude_container {
-    position: absolute;
-    left: 55%;
-    top: 30%;
-}
+                @keyframes jonasthink_kf {
+                    0% {
+                        background-position: 0;
+                    }
+                    100% {
+                        background-position: -700%;
+                    }
+                }
 
-#nude_sprite {
-    background-image: url("img/nude.svg");
-    background-size: 20%;
-    width: 26vw;
-    height: 48vw;
-    display: none;
-    background-repeat: no-repeat;
-}
+                #nude_container {
+                    position: absolute;
+                    left: 55%;
+                    <<<<<<< HEAD top: 35%;
+                    >>>>>>>origin/master
+                }
 
-.nude {
-    animation-name: nude_kf;
-    animation-duration: 3s;
-    animation-delay: 3s;
-}
+                #nude_sprite {
+                    background-image: url("img/nude.svg");
+                    background-size: 100%;
+                    width: 4vw;
+                    height: 7vw;
+                    display: none;
+                    background-repeat: no-repeat;
+                }
 
-@keyframes nude_kf {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(3deg);
-    }
-}
+                .nude {
+                    animation-name: nude_kf;
+                    animation-duration: 1s;
+                    animation-delay: 1s;
+                }
 
-#jubel_container {
-    position: absolute;
-    left: 40%;
-    top: 20%;
-    display: none;
-}
+                @keyframes nude_kf {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(3deg);
+                    }
+                }
 
-#jubel_sprite {
-    background-image: url(img/textbox.svg);
-    background-size: 100%;
-    height: 10vw;
-    width: 10vw;
-}
+                #jubel_container {
+                    position: absolute;
+                    left: 40%;
+                    top: 20%;
+                    display: none;
+                }
 
-.jubel {
-    animation-name: jubel_kf;
-    animation-duration: 0.1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
+                #jubel_sprite {
+                    background-image: url(img/textbox.svg);
+                    background-size: 100%;
+                    height: 10vw;
+                    width: 10vw;
+                }
 
-@keyframes jubel_kf {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(4deg);
-    }
-}
+                .jubel {
+                    animation-name: jubel_kf;
+                    animation-duration: 0.1s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: both;
+                }
 
-#share_container {
-    position: absolute;
-    left: 40%;
-    top: 20%;
-    display: none;
-}
+                @keyframes jubel_kf {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        <<<<<<< HEAD transform: rotate(8deg);
+                        =======transform: rotate(10deg);
+                        >>>>>>>origin/master
+                    }
+                }
 
-#share_sprite {
-    background-image: url(img/grlsad.svg);
-    background-size: 2100%;
-    height: 31vw;
-    width: 37.5vw;
-}
+                #share_container {
+                    position: absolute;
+                    left: 40%;
+                    top: 20%;
+                    display: none;
+                }
 
-.share_test {
-    animation-name: sharetest_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 3;
-    animation-timing-function: steps(21);
-    animation-fill-mode: both;
-}
+                #share_sprite {
+                    background-image: url(img/grlsad.svg);
+                    background-size: 2100%;
+                    height: 31vw;
+                    width: 37.5vw;
+                }
 
-@keyframes sharetest_kf {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: -2100%;
-    }
-}
+                .share_test {
+                    animation-name: sharetest_kf;
+                    animation-duration: 2s;
+                    animation-iteration-count: 3;
+                    animation-timing-function: steps(21);
+                    animation-fill-mode: both;
+                }
 
-#mobil_container {
-    position: absolute;
-    left: 30%;
-    top: 2%;
-    animation-duration: 3s;
-    display: none;
-}
+                @keyframes sharetest_kf {
+                    0% {
+                        background-position: 0%;
+                    }
+                    100% {
+                        background-position: -2100%;
+                    }
+                }
 
-#mobil_sprite {
-    background-image: url(svg/mobilsprite.svg);
-    background-size: 100%;
-    height: 50vw;
-    width: 50vw;
-    background-repeat: no-repeat;
-}
+                #mobil_container {
+                    position: absolute;
+                    left: 30%;
+                    top: 2%;
+                    animation-duration: 3s;
+                    display: none;
+                }
 
-.mobil_anim {
-    animation-name: mobilanim_kf;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: (6);
-    animation-fill-mode: both;
-}
+                #mobil_sprite {
+                    background-image: url(svg/mobilsprite.svg);
+                    background-size: 100%;
+                    height: 50vw;
+                    width: 50vw;
+                    background-repeat: no-repeat;
+                }
 
-@keyframes mobilanim_kf {
-    0% {
-        background-position: 0;
-    }
-    100% {
-        background-position: -600%;
-    }
-}
+                .mobil_anim {
+                    animation-name: mobilanim_kf;
+                    animation-duration: 4s;
+                    animation-iteration-count: 1;
+                    animation-timing-function: (6);
+                    animation-fill-mode: both;
+                }
 
-#prison_container {
-    position: absolute;
-    left: 35%;
-    top: -5%;
-    animation-duration: 2s;
-    display: none;
-}
+                @keyframes mobilanim_kf {
+                    0% {
+                        background-position: 0;
+                    }
+                    100% {
+                        background-position: -600%;
+                    }
+                }
 
-#prison_sprite {
-    background-image: url(img/prison.svg);
-    background-size: 100%;
-    height: 50vw;
-    width: 50vw;
-    background-repeat: no-repeat;
-}
+                #prison_container {
+                    position: absolute;
+                    left: 35%;
+                    top: -5%;
+                    animation-duration: 2s;
+                    display: none;
+                }
 
-.prison_rotate {
-    animation-name: prison_rotate_kf;
-    animation-duration: 0.1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
+                #prison_sprite {
+                    background-image: url(img/prison.svg);
+                    background-size: 100%;
+                    height: 50vw;
+                    width: 50vw;
+                    background-repeat: no-repeat;
+                }
 
-@keyframes prison_rotate_kf {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(4deg);
-    }
-}
+                .prison_rotate {
+                    animation-name: prison_rotate_kf;
+                    animation-duration: 0.1s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: both;
+                }
 
-.prison_fall {
-    animation-name: prison_fall_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
+                @keyframes prison_rotate_kf {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(4deg);
+                    }
+                }
 
-@keyframes prison_fall_kf {
-    0% {
-        left: 35%;
-        top: -5%;
-    }
-    100% {
-        left: 35%;
-        top: 30%;
-    }
-}
+                .prison_fall {
+                    animation-name: prison_fall_kf;
+                    animation-duration: 2s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: both;
+                }
 
-#privatsnak_container {
-    position: absolute;
-    left: 40%;
-    top: 20%;
-    display: none;
-}
+                @keyframes prison_fall_kf {
+                    0% {
+                        left: 35%;
+                        top: -5%;
+                    }
+                    100% {
+                        left: 35%;
+                        top: 30%;
+                    }
+                }
 
-#privatsnak_sprite {
-    background-image: url(img/logo-privatsnak.png);
-    background-repeat: no-repeat;
-    background-size: 20%;
-    width: 129vw;
-    height: 187vw;
-}
-
-.privatsnak_animation {
-    animation-name: privatsnak_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in;
-}
-
-@keyframes privatsnak_kf {
-    from {
-        left: 40%;
-        top: 40%;
-    }
-    to {
-        left: 30%;
-        top: 40%;
-    }
-}
-
-#anonym_container {
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    display: none;
-}
-
-#anonym_sprite {
-    background-image: url(img/anonym-badge.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 21.1875vw;
-    height: 28.25vw;
-}
-
-.anonym_animation {
-    animation-name: anonym_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in;
-}
-
-@keyframes anonym_kf {
-    from {
-        left: 40%;
-        top: 40%;
-    }
-    to {
-        left: 30%;
-        top: 40%;
-    }
-}
+                <<<<<<< HEAD #privatsnak_container {
+                    =======#privat_container {
+                        >>>>>>>origin/master position: absolute;
+                        left: 40%;
+                        top: 20%;
+                        display: none;
+                    }
+                    #privat_sprite {
+                        background-image: url(img/privat.svg);
+                        background-repeat: no-repeat;
+                        background-size: 20%;
+                        width: 50vw;
+                        height: 25vw;
+                    }
+                    .privat_logo {
+                        animation-name: privat_kf;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: both;
+                        animation-timing-function: ease-in;
+                    }
+                    @keyframes privat_kf {
+                        from {
+                            left: 40%;
+                            top: 20%;
+                        }
+                        to {
+                            left: 30%;
+                            top: 40%;
+                        }
+                    }
+                    <<<<<<< HEAD=======#snak_container {
+                        position: absolute;
+                        left: 40%;
+                        top: 20%;
+                        display: none;
+                    }
+                    #snak_sprite {
+                        background-image: url(img/snak.svg);
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        width: 50vw;
+                        height: 25vw;
+                    }
+                    .snak_logo {
+                        animation-name: snak_kf;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: both;
+                        animation-timing-function: ease-in;
+                    }
+                    @keyframes snak_kf {
+                        from {
+                            left: 40%;
+                            top: 20%;
+                        }
+                        to {
+                            left: 30%;
+                            top: 40%;
+                        }
+                    }
+                    >>>>>>>origin/master #anonym_container {
+                        position: absolute;
+                        left: 10%;
+                        top: 10%;
+                        display: none;
+                    }
+                    #anonym_sprite {
+                        background-image: url(img/anonym.svg);
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        width: 25vw;
+                        height: 25vw;
+                    }
+                    .anonym_animation {
+                        animation-name: anonym_kf;
+                        animation-duration: 2s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: both;
+                        animation-timing-function: ease-in;
+                    }
+                    @keyframes anonym_kf {
+                        from {
+                            left: 10%;
+                            top: 10%;
+                        }
+                        to {
+                            left: 30%;
+                            top: 40%;
+                        }
+                    }
