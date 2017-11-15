@@ -94,6 +94,38 @@ button.no_share_button {
     }
 }
 
+#jonassad_container {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    display: none;
+}
+
+
+#jonassad_sprite {
+    background-image: url("img/ked_sprite.svg");
+    background-size: 200%;
+    width: 22vw;
+    height: 40vw;
+}
+
+.jonassad {
+    animation-name: jonasstart_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(1);
+    animation-fill-mode: both;
+}
+
+@keyframes jonassad_kf {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: -100%;
+    }
+}
+
 #nude_container {
     position: absolute;
     left: 55%;
@@ -163,6 +195,7 @@ button.no_share_button {
     left: 40%;
     top: 20%;
     display: none;
+    z-index: 10;
 }
 
 #share_sprite {
@@ -195,13 +228,13 @@ button.no_share_button {
     left: 0%;
     top: 0%;
     display: none;
-
+    z-index: 5;
 }
 
 #mobil_sprite {
     background-image: url(img/mobilsprite.svg);
     background-size: 600%;
-    height: 450vw;
+    height: 50vw;
     width: 100vw;
 }
 
@@ -228,6 +261,7 @@ button.no_share_button {
     top: -5%;
     animation-duration: 2s;
     display: none;
+
 }
 
 #prison_sprite {

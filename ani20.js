@@ -114,7 +114,8 @@ function prison1() {
     $("#prison_container").addClass("prison_fall");
     //$("#prison_container").addClass("prison_rotate");
 
-    $("#jonas_container").show();
+    $("#jonassad_container").show();
+    $("#jonassad_sprite").addClass("jonassad");
 
 
     $("#tiktok")[0].pause();
@@ -153,6 +154,8 @@ function privatSnak() {
 
     $("#tiktok")[0].pause();
 
+    $("#jonassad_container").hide();
+    $("#jonassad_sprite").removeClass("jonassad");
     $("#jubel_sprite").removeClass("jubel");
     $("#jubel_container").hide();
 
