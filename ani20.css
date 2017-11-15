@@ -7,7 +7,6 @@ body {
     height: 56.25vw;
     position: absolute;
     background-color: orange;
-
 }
 
 button1 {
@@ -20,7 +19,6 @@ button1 {
     display: inline-block;
     font-family: 'Futura', sans-serif;
     font-size: 10px;
-
 }
 
 button2 {
@@ -33,14 +31,12 @@ button2 {
     display: inline-block;
     font-family: 'Futura', sans-serif;
     font-size: 10px;
-
 }
 
 #jonas_container {
     position: absolute;
     left: 40%;
     top: 20%;
-
 }
 
 #box {
@@ -61,14 +57,11 @@ button2 {
 @keyframes jonasstart_kf {
     0% {
         background-position: 0;
-
     }
-
     100% {
         background-position: -200%;
     }
 }
-
 
 #jonas_sprite {
     background-image: url("img/jonas_final_1.svg");
@@ -77,39 +70,28 @@ button2 {
     height: 40vw;
 }
 
-
-
-
 .jonasthink {
     animation-name: jonasthink_kf;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: steps(7);
     animation-fill-mode: both;
-
+    animation-delay: 1.5s;
 }
 
 @keyframes jonasthink_kf {
     0% {
         background-position: 0;
-
     }
-
-
-
     100% {
         background-position: -700%;
     }
 }
 
-
 #nude_container {
     position: absolute;
     left: 55%;
     top: 30%;
-
-
-
 }
 
 #nude_sprite {
@@ -129,12 +111,9 @@ button2 {
 
 @keyframes nude_kf {
     from {
-
         transform: rotate(0deg);
-
     }
     to {
-
         transform: rotate(3deg);
     }
 }
@@ -158,18 +137,13 @@ button2 {
     animation-duration: 0.1s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-
 }
-
 
 @keyframes jubel_kf {
     from {
-
         transform: rotate(0deg);
-
     }
     to {
-
         transform: rotate(4deg);
     }
 }
@@ -194,19 +168,49 @@ button2 {
     animation-iteration-count: 3;
     animation-timing-function: steps(21);
     animation-fill-mode: both;
-
 }
 
 @keyframes sharetest_kf {
     0% {
         background-position: 0%;
-
     }
     100% {
         background-position: -2100%;
     }
 }
 
+#mobil_container {
+    position: absolute;
+    left: 30%;
+    top: 2%;
+    animation-duration: 3s;
+    display: none;
+}
+
+#mobil_sprite {
+    background-image: url(svg/mobilsprite.svg);
+    background-size: 100%;
+    height: 50vw;
+    width: 50vw;
+    background-repeat: no-repeat;
+}
+
+.mobil_anim {
+    animation-name: mobilanim_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: (6);
+    animation-fill-mode: both;
+}
+
+@keyframes mobilanim_kf {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: -600%;
+    }
+}
 
 #prison_container {
     position: absolute;
@@ -214,7 +218,6 @@ button2 {
     top: -5%;
     animation-duration: 2s;
     display: none;
-
 }
 
 #prison_sprite {
@@ -230,22 +233,16 @@ button2 {
     animation-duration: 0.1s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-
 }
-
 
 @keyframes prison_rotate_kf {
     from {
-
         transform: rotate(0deg);
-
     }
     to {
-
         transform: rotate(4deg);
     }
 }
-
 
 .prison_fall {
     animation-name: prison_fall_kf;
@@ -259,21 +256,17 @@ button2 {
         left: 35%;
         top: -5%;
     }
-
     100% {
         left: 35%;
         top: 30%;
     }
 }
 
-
-
 #privatsnak_container {
     position: absolute;
     left: 40%;
     top: 20%;
     display: none;
-
 }
 
 #privatsnak_sprite {
@@ -282,7 +275,6 @@ button2 {
     background-size: 20%;
     width: 129vw;
     height: 187vw;
-
 }
 
 .privatsnak_animation {
@@ -291,7 +283,6 @@ button2 {
     animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-timing-function: ease-in;
-
 }
 
 @keyframes privatsnak_kf {
@@ -299,13 +290,11 @@ button2 {
         left: 40%;
         top: 40%;
     }
-
     to {
         left: 30%;
         top: 40%;
     }
 }
-
 
 #anonym_container {
     position: absolute;
@@ -328,7 +317,6 @@ button2 {
     animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-timing-function: ease-in;
-
 }
 
 @keyframes anonym_kf {
@@ -336,7 +324,6 @@ button2 {
         left: 40%;
         top: 40%;
     }
-
     to {
         left: 30%;
         top: 40%;
