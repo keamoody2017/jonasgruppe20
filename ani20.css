@@ -11,26 +11,30 @@ body {
 }
 
 button1 {
-    background-color: blue;
-    border-radius: 50px;
-    color: white;
-    padding: 10px 10px;
+    position: absolute;
+    top: 20%;
+    left: 64%;
+    background: url(img/privat1.svg);
+    background-repeat: no-repeat;
+    padding: 40px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    color: white;
     font-family: 'Futura', sans-serif;
     font-size: 10px;
 
 }
 
 button2 {
-    background-color: blueviolet;
-    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 64%;
+    background: url(img/snak1.svg);
+    background-repeat: no-repeat;
+
+    padding: 40px;
+    text-align: center;
+
     color: white;
-    padding: 10px 10px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
     font-family: 'Futura', sans-serif;
     font-size: 10px;
 
