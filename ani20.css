@@ -131,14 +131,13 @@ button.no_share_button {
     position: absolute;
     left: 40%;
     top: 20%;
-    display: none;
 }
 
 #jubel_sprite {
-    background-image: url(img/textbox.svg);
-    background-size: 100%;
-    height: 10vw;
-    width: 10vw;
+    background-image: url(img/jubel.svg);
+    background-size: 1600%;
+    height: 450vh;
+    width: 1600vw;
 }
 
 .jubel {
@@ -185,6 +184,37 @@ button.no_share_button {
     }
     100% {
         background-position: -2100%;
+    }
+}
+
+
+#mobil_container {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+}
+
+#mobil_sprite {
+    background-image: url(img/mobilsprite.svg);
+    background-size: 9600%;
+    height: 22.5vh;
+    width: 40vw;
+}
+
+.mobil_anim {
+    animation-name: mobil_anim_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    animation-timing-function: steps(6);
+    animation-fill-mode: both;
+}
+
+@keyframes mobil_anim_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -9600%;
     }
 }
 

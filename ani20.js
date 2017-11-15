@@ -68,10 +68,11 @@ function reaction2() {
 function jubel() {
     console.log("jubel");
     $("#jubel_container").off("animationend", jubel);
+
     $("#jonas_sprite").show();
     $("#nude_sprite").hide();
     $("#jubel_container").show();
-    $("#jubel_sprite").addClass("jubel");
+    $("#jubel_container").addClass("jubel");
     $("#jubel_container").on("animationend", privatSnak);
 }
 
