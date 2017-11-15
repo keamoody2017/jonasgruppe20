@@ -120,8 +120,11 @@ function privatSnak() {
     $("#privat_container").off("animationend", privatSnak);
 
 
+
+
     $("#jonas_container").hide();
     $("#prison_container").hide();
+    $("#nude_container").hide();
 
     $("privat_container").show();
     $("snak_container").show();
