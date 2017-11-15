@@ -70,9 +70,10 @@ function jubel() {
     $("#jubel_container").off("animationend", jubel);
 
     $("#jonas_sprite").show();
+    $("#jonas_sprite").addClass("jonasstart");
     $("#nude_sprite").hide();
     $("#jubel_container").show();
-    $("#jubel_container").addClass("jubel");
+    $("#jubel_sprite").addClass("jubel");
     $("#jubel_container").on("animationend", privatSnak);
 }
 
@@ -88,8 +89,8 @@ function share() {
     $("#share_container").show();
     $("#share_sprite").addClass("share_test");
 
-    $("mobil_container").show();
-    $("mobil_sprite").addClass("mobil_anim");
+    $("#mobil_container").show();
+    $("#mobil_sprite").addClass("mobil_anim");
 
     $("#tiktok")[0].pause();
 
@@ -104,6 +105,9 @@ function prison1() {
 
     $("#share_sprite").removeClass("share_test");
     $("#share_sprite").hide();
+    $("#mobil_container").hide();
+    $("#mobil_sprite").removeClass("mobil_anim");
+
     $("#prison_container").show();
 
     $("#jonas_sprite").show();
