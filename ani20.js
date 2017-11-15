@@ -4,6 +4,8 @@ $(window).on("load", jonasThink);
 function jonasThink() {
     console.log("jonasThink");
 
+    $(".share_button").hide();
+    $(".no_share_button").hide();
     $("#jonas_sprite").addClass("jonasthink");
     $("#jonas_container").on("animationend", tiktok);
     $("#jonas_container").on("animationend", nude);
@@ -29,6 +31,8 @@ function tiktok() {
 }
 
 function valgMedMuligheder() {
+    $(".share_button").show();
+    $(".no_share_button").show();
     $(".share_button").on("click", reaction1);
     $(".no_share_button").on("click", reaction2);
 
@@ -63,8 +67,12 @@ function reaction2() {
 
 function jubel() {
     console.log("jubel");
-    $("#jonas_sprite").hide();
+    $("#jubel_container").off("animationend", jubel);
+    $("#jonas_sprite").show();
+    $("#nude_sprite").hide();
     $("#jubel_container").show();
+    $("#jubel_sprite").addClass("jubel");
+    $("#jubel_container").on("animationend", privatSnak);
 }
 
 function share() {
@@ -98,6 +106,7 @@ function prison1() {
     $("#prison_container").show();
 
     $("#jonas_sprite").show();
+    $("#nude_container").hide();
 
     $("#prison_container").addClass("prison_rotate");
 
@@ -127,25 +136,41 @@ function prison2() {
 
 function privatSnak() {
     console.log("privatSnak");
-    $("#privatsnak_container").off("animationend", privatSnak);
+    $("#privat_container").off("animationend", privatSnak);
+
 
     $("#tiktok")[0].pause();
 
+    $("#jubel_sprite").removeClass("jubel");
+    $("#jubel_container").hide();
+
     $("#jonas_container").hide();
     $("#prison_container").hide();
-    $("#privatsnak_container").show();
-    $("#privatsnak_sprite").addClass("privatsnak_animation");
+    $("#nude_container").hide();
 
-    $("#privatsnak_container").on("animationend", anonymlogo);
+    console.log("i was here");
+    $("#privat_container").css("display", "block");
+
+    $("#privat_container").addClass("privat_logo");
+
+
+    $("#snak_container").css("display", "block");
+
+    $("#snak_container").addClass("snak_logo");
+
+    $("#privat_container").on("animationend", anonymLogo);
 }
 
 
-function anonymlogo() {
-    console.log("anonymlogo");
-    $("#anonym_container").off("animationend", anonymlogo);
+
+function anonymLogo() {
+    console.log("anonymLogo");
+    $("#anonym_container").off("animationend", anonymLogo);
+
+
+    $("#privat_sprite").hide();
+    $("#snak_sprite").hide();
 
     $("#anonym_container").show();
-
-    $("#privatsnak_container").hide();
-    $("#anonym_sprite").addClass("");
+    $("#anonym_container").addClass("anonym_animation");
 }
