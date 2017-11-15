@@ -55,10 +55,12 @@ function reaction2() {
 
 function jubel() {
     console.log("jubel");
-    $("#jonas_sprite").hide();
+    $("#jubel_container").off("animationend", jubel);
+    $("#jonas_sprite").show();
+    $("#nude_sprite").hide();
     $("#jubel_container").show();
     $("#jubel_sprite").addClass("jubel");
-    privatSnak();
+    $("#jubel_container").on("animationend", privatSnak);
 }
 
 function share() {
@@ -121,28 +123,36 @@ function privatSnak() {
 
 
 
+    $("#jubel_sprite").removeClass("jubel");
+    $("#jubel_container").hide();
 
     $("#jonas_container").hide();
     $("#prison_container").hide();
     $("#nude_container").hide();
 
-    $("privat_container").show();
-    $("snak_container").show();
+    console.log("i was here");
+    $("#privat_container").css("display", "block");
 
-    $("privat_sprite").addClass("privat_logo");
-    $("snak_sprite").addClass("snak_animation");
+    $("#privat_container").addClass("privat_logo");
+
+
+    $("#snak_container").css("display", "block");
+
+    $("#snak_container").addClass("snak_logo");
 
     $("#privat_container").on("animationend", anonymLogo);
 }
+
+
 
 function anonymLogo() {
     console.log("anonymLogo");
     $("#anonym_container").off("animationend", anonymLogo);
 
 
-    $("privat_sprite").hide();
-    $("snak_sprite").hide();
+    $("#privat_sprite").hide();
+    $("#snak_sprite").hide();
 
     $("#anonym_container").show();
-    $("#anonym_sprite").addClass("anonym_animation");
+    $("#anonym_container").addClass("anonym_animation");
 }

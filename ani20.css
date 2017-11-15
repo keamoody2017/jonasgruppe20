@@ -1,5 +1,8 @@
 body {
     margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #scene {
@@ -10,34 +13,38 @@ body {
 
 }
 
-button1 {
+button {
+    min-width: 120px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    background-position: center;
+    background-size: cover;
     position: absolute;
+    padding: 40px;
+    text-align: center;
+
+    color: white;
+    font-family: 'Futura', sans-serif;
+    font-size: 10px;
+    background-repeat: no-repeat;
+}
+
+button.share_button {
+
     top: 20%;
     left: 64%;
     background: url(img/privat1.svg);
     background-repeat: no-repeat;
-    padding: 40px;
-    text-align: center;
-    color: white;
-    font-family: 'Futura', sans-serif;
-    font-size: 10px;
-
 }
 
-button2 {
-    position: absolute;
+button.no_share_button {
     top: 50%;
     left: 64%;
     background: url(img/snak1.svg);
+
     background-repeat: no-repeat;
-
-    padding: 40px;
-    text-align: center;
-
-    color: white;
-    font-family: 'Futura', sans-serif;
-    font-size: 10px;
-
 }
 
 #jonas_container {
@@ -110,7 +117,7 @@ button2 {
 #nude_container {
     position: absolute;
     left: 55%;
-    top: 30%;
+    top: 35%;
 
 
 
@@ -118,17 +125,17 @@ button2 {
 
 #nude_sprite {
     background-image: url("img/nude.svg");
-    background-size: 20%;
-    width: 26vw;
-    height: 48vw;
+    background-size: 100%;
+    width: 4vw;
+    height: 7vw;
     display: none;
     background-repeat: no-repeat;
 }
 
 .nude {
     animation-name: nude_kf;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-delay: 1s;
 }
 
 @keyframes nude_kf {
@@ -159,8 +166,8 @@ button2 {
 
 .jubel {
     animation-name: jubel_kf;
-    animation-duration: 4s;
-    animation-iteration-count: 4;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
     animation-fill-mode: both;
 
 }
@@ -272,7 +279,7 @@ button2 {
 
 
 
-#privatsnak_container {
+#privat_container {
     position: absolute;
     left: 40%;
     top: 20%;
@@ -280,8 +287,8 @@ button2 {
 
 }
 
-#privatsnak_sprite {
-    background-image: url(img/logo-privatsnak.png);
+#privat_sprite {
+    background-image: url(img/privat.svg);
     background-repeat: no-repeat;
     background-size: 20%;
     width: 129vw;
@@ -289,8 +296,8 @@ button2 {
 
 }
 
-.privatsnak_animation {
-    animation-name: privatsnak_kf;
+.privat_logo {
+    animation-name: privat_kf;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
@@ -298,7 +305,7 @@ button2 {
 
 }
 
-@keyframes privatsnak_kf {
+@keyframes privat_kf {
     from {
         left: 40%;
         top: 40%;
@@ -311,6 +318,44 @@ button2 {
 }
 
 
+#snak_container {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    display: none;
+
+}
+
+#snak_sprite {
+    background-image: url(img/snak.svg);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    width: 129vw;
+    height: 187vw;
+
+}
+
+.snak_logo {
+    animation-name: snak_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes snak_kf {
+    from {
+        left: 40%;
+        top: 40%;
+    }
+
+    to {
+        left: 30%;
+        top: 40%;
+    }
+}
+
 #anonym_container {
     position: absolute;
     left: 10%;
@@ -319,7 +364,7 @@ button2 {
 }
 
 #anonym_sprite {
-    background-image: url(img/anonym-badge.png);
+    background-image: url(img/anonym.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 21.1875vw;
