@@ -111,8 +111,10 @@ function prison1() {
     $("#prison_container").addClass("prison_rotate");
 
     $("#tiktok")[0].pause();
+    $("#prison")[0].currentTime = 4.5;
 
     $("#prison_container").on("animationend", prison2);
+
 
 }
 
@@ -124,6 +126,8 @@ function prison2() {
     $("#nude_container").hide();
 
     $("#tiktok")[0].pause();
+    $("#prison")[0].play();
+
 
     $("#prison_container").show();
     $("#prison_container").removeClass("prison_rotate");
@@ -153,6 +157,7 @@ function privatSnak() {
 
     $("#privat_container").addClass("privat_logo");
 
+    $("#tiktok")[0].pause();
 
     $("#snak_container").css("display", "block");
 
@@ -167,6 +172,7 @@ function anonymLogo() {
     console.log("anonymLogo");
     $("#anonym_container").off("animationend", anonymLogo);
 
+    $("#tiktok")[0].pause();
 
     $("#privat_sprite").hide();
     $("#snak_sprite").hide();
