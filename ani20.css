@@ -161,7 +161,6 @@ button.no_share_button {
     left: 0%;
     top: 0%;
     display: none;
-
 }
 
 #jubel_sprite {
@@ -192,7 +191,7 @@ button.no_share_button {
 
 #share_container {
     position: absolute;
-    left: 40%;
+    left: 32.5%;
     top: 20%;
     display: none;
     z-index: 10;
@@ -207,8 +206,8 @@ button.no_share_button {
 
 .share_test {
     animation-name: sharetest_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 3;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
     animation-timing-function: steps(21);
     animation-fill-mode: both;
 }
@@ -240,7 +239,7 @@ button.no_share_button {
 
 .mobil_anim {
     animation-name: mobil_anim_kf;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: 1;
     animation-timing-function: steps(5);
     animation-fill-mode: forwards;
